@@ -16,21 +16,22 @@
 <body>
     <div data-role="page" id="home">
         <!-- header --> 
-        <div data-role="header" data-theme='a'>
+        <div data-role="header" data-theme='b'>
             <h2>Home page</h2>
             <!-- /navbar -->
             <div data-role="navbar" data-theme='c'>
                 <ul>
-                    <li><a href="#entry">Add Your Recipe</a></li>
+                    <li><a href="#entry">Add A New Recipe</a></li>
                     <li><a href="#display">Your Recipes</a></li>
                 </ul>
             </div>
-                
+            <h2>Welcome to the receipes website</h2>
         </div>
 
         <!-- content -->
         <div data-role="content" data-theme='c'>
-            Real application function code
+            You can keep your favorite recipes in this website.<br><br>
+            <img src="images/recipes.jpg" alt="picture of recipes" id = "pic">
         </div>
         <!-- notes footer --> 
         <div data-role="footer" data-theme='b'>
@@ -38,11 +39,12 @@
         </div>
     </div>
 
-    //**************************************************************************
+<!-- ********************end home page*************************************** -->
+
     <div data-role="page" id="entry">
         <!-- header --> 
-        <div data-role="header" data-theme='a'>
-            <h2>Add New Note</h2>
+        <div data-role="header" data-theme='b'>
+            <h2>Add a New Recipe</h2>
             <!-- /navbar -->
             <div data-role="navbar" data-theme='c'>
                 <ul>
@@ -50,10 +52,32 @@
                     <li><a href="#display">Your Recipes</a></li>
                 </ul>
             </div>
+            <h2>Add Your New Recipe</h2>
         </div>
         <!-- content -->
         <div data-role="content" data-theme='c'>
-            Real application function code
+            Enter the recipe name<br>
+            <input type="text" value="" id="dataInput" />
+        
+            <label for="select-type">Select a Type</label>
+            <select name="select-type" id="select-type">
+                <option value="Salads">Salads</option>
+                <option value="Soups">Soups</option>
+                <option value="MeatRecipes">Meat Recipes</option>
+                <option value="Desserts">Desserts</option>
+            </select>
+        
+            <button id="buttonAdd">Add Recipe</button>
+            <br>
+        
+                <a href="#popupMenu" data-rel="popup" data-transition="slidefade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">What next?</a>
+                <div data-role="popup" id="popupMenu" data-theme="b">
+                <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                <li data-role="list-divider">Choose an action</li>
+                <li><a href="#home" data-transition="flow" >Back to Home</a></li>
+                <li><a href="#show" data-transition="fade" >Show Recipes</a></li>
+                </ul>
+                </div>
         </div>
         <!-- notes footer --> 
         <div data-role="footer" data-theme='b'>
@@ -61,27 +85,30 @@
         </div>
     </div>
 
-    //**************************************************************************
+  <!-- ********************end add page*************************************** -->
     <div data-role="page" id="display">
         <!-- header --> 
-        <div data-role="header" data-theme='a'>
-            <h2>Your Notes</h2>
+        <div data-role="header" data-theme='b'>
+            <h2>Your Recipes</h2>
             <!-- /navbar -->
             <div data-role="navbar" data-theme='c'>
                 <ul>
                     <li><a href="#home">Home Page</a></li>
-                    <li><a href="#entry">Add Your Recipe</a></li>
+                    <li><a href="#entry">Add A New Recipe</a></li>
                 </ul>
             </div>
+            <h2>Here are Your Recipes</h2>
         </div>
         <!-- content -->
         <div data-role="content" data-theme='c'>
-            Real application function code
+            <ul id="myul" data-role="listview"></ul>
         </div>
         <!-- notes footer --> 
         <div data-role="footer" data-theme='b'>
             <h3>Copyrigtht 2023 by Elizabeth and Maria</h3>
         </div>
+        <!-- ********************end your recipes page*************************************** -->
+        
     </div>
     
     
