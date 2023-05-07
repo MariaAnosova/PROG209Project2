@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     createList();
 
     document.getElementById("buttonAdd").addEventListener("click", function () {
-        RecipeArray.push ( new RecipeObject(document.getElementById("dataInput").value, selectedType ) );
+        RecipeArray.push ( new RecipeObject(document.getElementById("recipeName").value, selectedType ) );
         
-        document.getElementById("dataInput").value = "";
+        document.getElementById("recipeName").value = "";
 
         createList();
     });
